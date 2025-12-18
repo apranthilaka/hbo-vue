@@ -1,10 +1,41 @@
-<script setup></script>
+<script setup>
+// defineProps is a compiler macro; it declares which properties
+// this component can receive from a parent.
+import { ref } from 'vue';
+const isButtonDisabled = ref(true);
 
+// button On click function
+
+function buttonClick() {
+    if (isButtonDisabled.value === false) {
+        isButtonDisabled.value = true;
+    } else if (isButtonDisabled.value === true) {
+        isButtonDisabled.value = false;
+    }
+}
+
+const props = defineProps({
+    title: {
+        type: String,
+        required: true,
+    },
+    entityTypeClass: {
+        type: String,
+        default: 'card--gp',
+    },
+    isMember: Boolean,
+});
+
+// You can access props in the script using the 'props' object
+console.log('User joined:', props.username);
+</script>
 <template>
-    <div class="card card--gp">
+    <!-- :class is attribute binding -->
+    <div class="card" :class="entityTypeClass">
         <div class="card_heading">
             <div class="card_icon">GP</div>
-            <h6>Card Title</h6>
+            <!-- {{ title }} is text interpalation  -->
+            <h6>{{ title }}</h6>
         </div>
         <div class="card_links">
             <div>
@@ -38,6 +69,8 @@
                 <p>Add to My Entities</p>
             </div>
         </div>
+        <button :disabled="isButtonDisabled">Button</button>
+        <button @click="buttonClick">change state</button>
     </div>
 </template>
 
@@ -61,8 +94,8 @@
         align-items: center;
         gap: 8px;
         padding: 8px 16px;
-        border-bottom: 1px solid gray;
-        background-color: rgb(241, 241, 241);
+        border-bottom: 1px solid var(--header-border-color);
+        background-color: var(--header-background-color);
         transition: background-color 0.5s ease;
 
         h6 {
@@ -71,10 +104,10 @@
     }
 
     &_icon {
-        border: 1px solid gray;
-        background-color: gray;
+        border: 1px solid var(--icon-border-color);
+        background-color: var(--icon-background-color);
         width: 32px;
-        height: 40px;
+        height: 32px;
         border-radius: 1000px;
         display: flex;
         justify-content: center;
