@@ -14,8 +14,8 @@ import Sidebar from '@/commonComponents/Sidebar.vue';
 
 <style lang="scss" scoped>
 .layout {
-    height: auto;
-    border: 10px solid blue;
+    overflow: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: 250px auto;
     /* top menu row fixed at 56px and content row takes remaining height */

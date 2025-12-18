@@ -58,25 +58,21 @@ import Card from './Card.vue';
 </template>
 <style lang="scss" scoped>
 .dashboard-container {
-    height: 500px;
-    border: 10px solid green;
+    // border: 10px solid green;
+    overflow: hidden;
+    height: auto;
 }
 
 .cardsContainer {
     height: 100%;
-    border: 10px solid black;
-    overflow-y: auto;
-    overflow-x: hidden;
-    min-height: 0;
-    flex: 1 1 auto;
+    overflow: auto;
+    // border: 10px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: min-content;
     gap: 16px;
     padding: 16px;
-    padding-top: 0;
 
-    position: relative;
     scrollbar-width: thin;
     /* Firefox */
     scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
