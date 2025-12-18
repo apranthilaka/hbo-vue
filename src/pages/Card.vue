@@ -74,7 +74,7 @@
         border: 1px solid gray;
         background-color: gray;
         width: 32px;
-        height: 32px;
+        height: 40px;
         border-radius: 1000px;
         display: flex;
         justify-content: center;
