@@ -4,7 +4,7 @@ import Dashboard from '@/pages/Dashboard.vue';
 
 // creating router instance
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         { path: '/', component: Home },
         { path: '/dashboard', component: Dashboard },

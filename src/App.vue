@@ -8,11 +8,11 @@ import Footer from '@/commonComponents/Sidebar.vue';
 </template>
 
 <style lang="scss">
-html,
-body {
+body,
+html {
     margin: 0;
     padding: 0;
-    border: 10px solid orange;
+    border: 1px solid orange;
 }
 
 body {

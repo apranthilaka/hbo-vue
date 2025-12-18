@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: '/hbo-vue/', // Replace with your actual repo name
+    base: '/hbo-vue/',
 
     plugins: [
         vue(),
