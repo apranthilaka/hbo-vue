@@ -12,7 +12,7 @@ import Sidebar from '@/commonComponents/Sidebar.vue';
 
 <style lang="scss" scoped>
 .layout {
-    overflow: auto;
+    // overflow: auto;
     height: 100%;
     display: grid;
     grid-template-columns: 250px auto;
