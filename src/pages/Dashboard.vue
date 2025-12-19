@@ -46,12 +46,12 @@ const cardDetails = ref([
     <DefaultLayout>
         <div class="dashboard-container">
             <div class="data-wrapper">
-                <div class="titleComponent">
-                    <div class="titleComponent__left">
+                <div class="dashboard-title">
+                    <div class="dashboard-title__left">
                         <i class="ph-fill ph-squares-four"></i>
-                        <h4>Dashboard</h4>
+                        <h4>DASHBOARD</h4>
                     </div>
-                    <div class="titleComponent__right">
+                    <div class="dashboard-title__right">
                         <div class="indicator indicator--green">
                             <div>
                                 <p>Background Jobs</p>
@@ -80,14 +80,14 @@ const cardDetails = ref([
                         </div>
                     </div>
                 </div>
-                <div class="cardsTitle">
-                    <div class="cardsTitle_left">
+                <div class="cards-title">
+                    <div class="cards-title_left">
                         <div>
                             <h6>125 Entities in Total</h6>
                         </div>
                     </div>
                     <div>
-                        <div class="cardsTitle_right">
+                        <div class="cards-title_right">
                             <select
                                 name="favorite-cuisine"
                                 aria-label="Select your favorite cuisine..."
@@ -128,16 +128,9 @@ const cardDetails = ref([
 </template>
 <style lang="scss" scoped>
 .dashboard-container {
-    // border: 10px solid red;
     grid-column: 2/3;
     grid-row: 2/3;
     overflow: hidden;
-    /* 2. Turn on Flexbox */
-    // display: flex;
-    // flex-direction: column;
-    /* 3. Prevent the container itself from scrolling */
-    // overflow: hidden;
-    // box-sizing: border-box;
 }
 
 .data-wrapper {
@@ -145,16 +138,16 @@ const cardDetails = ref([
     flex-direction: column;
     height: 100%; /* Ensure the wrapper fills the parent container's height */
 }
-.header-wrapper {
-    height: 56px;
-    width: 100%;
-    background-color: rgb(63, 27, 33);
-    padding: 0 16px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// .header-wrapper {
+//     height: 56px;
+//     width: 100%;
+//     background-color: rgb(63, 27, 33);
+//     padding: 0 16px;
+//     border: 1px solid black;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 .action-wrapper {
     height: 56px;
     width: 100%;
@@ -167,7 +160,7 @@ const cardDetails = ref([
 }
 .cardsContainer {
     // border: 10px solid rgb(0, 167, 50);
-    height: 100%;
+    // height: 100%;
     overflow-y: auto;
 
     display: grid;
@@ -175,6 +168,7 @@ const cardDetails = ref([
     grid-template-rows: min-content;
     gap: 16px;
     padding: 16px;
+    padding-top: 0;
 
     overflow-y: auto; /* Ensure scrolling is still enabled */
 
@@ -191,15 +185,15 @@ const cardDetails = ref([
 }
 
 // title component
-.titleComponent {
-    height: 68px;
+.dashboard-title {
     background-color: #ffffff;
-    padding: 16px 24px;
+    padding: 0 24px;
     // border-bottom: 1px solid rgb(214, 214, 214);
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 70px;
+
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
         rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
@@ -279,12 +273,12 @@ const cardDetails = ref([
 // title component
 
 // card title
-.cardsTitle {
+.cards-title {
     padding: 16px 24px;
     display: flex;
     justify-content: space-between;
-    align-items: fl;
-    padding-bottom: 0;
+    align-items: center;
+    height: 70px;
 
     h6 {
         margin: 0;

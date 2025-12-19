@@ -13,11 +13,15 @@ import { ref } from 'vue';
             </div>
         </div>
         <nav class="link-wrapper">
-            <div class="link-wrapper_link link-wrapper_link--state-active">
-                <RouterLink to="/"><p>Sitemap</p></RouterLink>
+            <div class="link-wrapper_link">
+                <RouterLink to="/" active-class="is-active"
+                    ><p>Sitemap</p></RouterLink
+                >
             </div>
             <div class="link-wrapper_link">
-                <RouterLink to="/dashboard"><p>Dashboard</p></RouterLink>
+                <RouterLink to="/dashboard" active-class="is-active"
+                    ><p>Dashboard</p></RouterLink
+                >
             </div>
         </nav>
     </div>
@@ -47,7 +51,7 @@ import { ref } from 'vue';
         background-color: none;
         width: 100%;
         text-decoration: none;
-        padding: 0 16px;
+        // padding: 0 16px;
         height: 40px;
         display: flex;
         justify-content: flex-start;
@@ -75,11 +79,23 @@ import { ref } from 'vue';
                 font-weight: 500;
             }
         }
-        &--state-active {
-            background-color: hsla(159, 22%, 77%, 1);
-            p {
-                color: rgb(45, 52, 75);
-                font-weight: 500;
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 4px; // Move radius here for better visual feedback
+            padding: 0 16px; // Move padding here so the whole clickable area is padded
+
+            // This is the magic part
+            &.is-active {
+                background-color: hsla(159, 22%, 77%, 1);
+                p {
+                    color: rgb(45, 52, 75);
+                    font-weight: 500;
+                }
             }
         }
     }

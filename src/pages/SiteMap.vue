@@ -32,7 +32,7 @@ const cardData = [
             <div class="data-wrapper">
                 <div class="sitemap-title">
                     <i class="ph-fill ph-squares-four"></i>
-                    <h4>Sitemap</h4>
+                    <h4>SITEMAP</h4>
                 </div>
                 <div class="sitemap-cards">
                     <div class="card" v-for="card in cardData" id="card.id">
@@ -68,19 +68,19 @@ const cardData = [
 }
 .sitemap-title {
     background-color: #ffffff;
-    padding: 16px 24px;
+    padding: 0 24px;
     gap: 8px;
     // border-bottom: 1px solid rgb(214, 214, 214);
-    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 68px;
+    min-height: 70px;
 
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
         rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
-    h4 {
+    h4,
+    i {
         margin: 0;
     }
     i {
