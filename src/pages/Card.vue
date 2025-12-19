@@ -108,7 +108,7 @@ console.log('User joined:', props.username);
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         padding: 8px 16px;
         border-bottom: 1px solid var(--header-border-color);
         background-color: var(--header-background-color);
@@ -181,6 +181,14 @@ console.log('User joined:', props.username);
             align-items: center;
             display: none;
         }
+    }
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+        transition: transform 0.1s ease-in-out;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+            rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        transform: scale(1.02);
     }
 }
 

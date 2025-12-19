@@ -122,7 +122,7 @@ import { ref } from 'vue';
         justify-content: center;
         align-items: center;
         border-radius: 1000px;
-        border: 1px solid gray;
+        border: 1px solid rgb(187, 187, 187);
         transition: img transform 0.3s ease;
         overflow: hidden;
 

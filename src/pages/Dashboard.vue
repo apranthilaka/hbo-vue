@@ -4,222 +4,42 @@ import Card from './Card.vue';
 import { ref } from 'vue';
 
 const cardDetails = ref([
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--cp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--cp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--me',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--me',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--cp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--me',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--gp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--cp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--me',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--gp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--gp',
-    },
+    { id: 1, name: 'Nebula Nexus', entityType: 'card--gp' },
+    { id: 2, name: 'Vortex Ventures', entityType: 'card--gp' },
+    { id: 3, name: 'Stellar Solutions', entityType: 'card--lp' },
+    { id: 4, name: 'Apex Analytics', entityType: 'card--cp' },
+    { id: 5, name: 'Quantum Quorum', entityType: 'card--gp' },
+    { id: 6, name: 'Blue Ridge Biotics', entityType: 'card--cp' },
+    { id: 7, name: 'Summit Systems', entityType: 'card--gp' },
+    { id: 8, name: 'Ironwood Industries', entityType: 'card--gp' },
+    { id: 9, name: 'Ethereal Edge', entityType: 'card--me' },
+    { id: 10, name: 'Titan Tech', entityType: 'card--gp' },
+    { id: 11, name: 'Nova Networks', entityType: 'card--gp' },
+    { id: 12, name: 'Silverline Software', entityType: 'card--me' },
+    { id: 13, name: 'Pinnacle Partners', entityType: 'card--gp' },
+    { id: 14, name: 'Zenith Zero', entityType: 'card--cp' },
+    { id: 15, name: 'Crestline Core', entityType: 'card--lp' },
+    { id: 16, name: 'Velocity Vision', entityType: 'card--gp' },
+    { id: 17, name: 'Prism Power', entityType: 'card--me' },
+    { id: 18, name: 'Aether Agency', entityType: 'card--gp' },
+    { id: 19, name: 'Horizon Holdings', entityType: 'card--gp' },
+    { id: 20, name: 'Flux Foundry', entityType: 'card--cp' },
+    { id: 21, name: 'Terra Trace', entityType: 'card--me' },
+    { id: 22, name: 'Catalyst Cloud', entityType: 'card--gp' },
+    { id: 23, name: 'Opal Optics', entityType: 'card--gp' },
+    { id: 24, name: 'Driftwood Digital', entityType: 'card--lp' },
+    { id: 25, name: 'Echo Engineering', entityType: 'card--gp' },
+    { id: 26, name: 'Radiant Robotics', entityType: 'card--gp' },
+    { id: 27, name: 'Sovereign Shield', entityType: 'card--gp' },
+    { id: 28, name: 'Kinetic Keys', entityType: 'card--gp' },
+    { id: 29, name: 'Atlas Align', entityType: 'card--gp' },
+    { id: 30, name: 'Modulus Media', entityType: 'card--lp' },
+    { id: 31, name: 'Solaris Stream', entityType: 'card--gp' },
+    { id: 32, name: 'Beacon Bridge', entityType: 'card--gp' },
+    { id: 33, name: 'Vector Valet', entityType: 'card--lp' },
+    { id: 34, name: 'Alpha Aspect', entityType: 'card--gp' },
+    { id: 35, name: 'Mantra Metals', entityType: 'card--gp' },
+    { id: 36, name: 'Neon Node', entityType: 'card--gp' },
 ]);
 </script>
 <template>
@@ -262,7 +82,9 @@ const cardDetails = ref([
                 </div>
                 <div class="cardsTitle">
                     <div class="cardsTitle_left">
-                        <h5>125 Entities in Total</h5>
+                        <div>
+                            <h6>125 Entities in Total</h6>
+                        </div>
                     </div>
                     <div>
                         <div class="cardsTitle_right">
@@ -459,16 +281,19 @@ const cardDetails = ref([
     padding: 16px 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: fl;
+    padding-bottom: 0;
 
-    h5 {
+    h6 {
         margin: 0;
+        color: gray;
     }
 
     &_left {
         display: flex;
         flex-direction: row;
         gap: 16px;
+        align-items: center;
     }
 
     &_right {
