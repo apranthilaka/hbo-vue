@@ -139,6 +139,12 @@ const cardDetails = ref([
     // overflow: hidden;
     // box-sizing: border-box;
 }
+
+.data-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the wrapper fills the parent container's height */
+}
 .header-wrapper {
     height: 56px;
     width: 100%;
@@ -148,11 +154,6 @@ const cardDetails = ref([
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.data-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Ensure the wrapper fills the parent container's height */
 }
 .action-wrapper {
     height: 56px;
@@ -191,6 +192,7 @@ const cardDetails = ref([
 
 // title component
 .titleComponent {
+    height: 68px;
     background-color: #ffffff;
     padding: 16px 24px;
     // border-bottom: 1px solid rgb(214, 214, 214);

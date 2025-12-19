@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/pages/Home.vue';
+import Home from '@/pages/SiteMap.vue';
 import Dashboard from '@/pages/Dashboard.vue';
 
 // creating router instance
