@@ -53,6 +53,14 @@ import { ref } from 'vue';
         justify-content: flex-start;
         align-items: center;
         transition: background-color font-weight 0.3s ease-in-out;
+        a {
+            width: 100%;
+            height: 100%;
+            // border: 1px solid red;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
         p {
             color: gray;
             margin: 0;
