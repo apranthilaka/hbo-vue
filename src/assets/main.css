@@ -1,0 +1,91 @@
+/* 1. Global Reset & Variables */
+:root {
+    --primary-color: #007bff;
+    --base-line-height: 1.5;
+}
+
+/* Apply border-box to everything */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Root Sizing (1rem = 14px) */
+html {
+    font-size: 87.5%;
+    scroll-behavior: smooth;
+}
+
+/* 3. Define default typography on the body 
+   Now 1rem will correctly equal the user's base font size. */
+body {
+    overflow: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: var(--base-line-height);
+    color: #333;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+
+    height: 100vh;
+    /* Modern 2025 Full-Height Setup */
+    /* min-height: 100dvh; */
+    /* Prevents horizontal scroll while allowing vertical */
+    /* overflow-x: hidden; 
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden; */
+    /* border: 5px solid orange; */
+}
+
+/* 4. Scale everything else using rem */
+h1 {
+    font-size: 2.5rem;
+    /* Scales to 40px if base is 16px */
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+#app {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+/* overwrites  */
+button {
+    background-color: black;
+    min-width: 150px;
+    padding: 0 16px;
+    height: 36px;
+}
+select,
+input {
+    margin: 0;
+    min-height: 36px;
+    max-height: 36px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 31px 0 12px;
+    font-size: 14px;
+    width: 200px;
+    box-shadow: none;
+    color: hbo.$text-medium-emphasis;
+    min-width: 250px;
+
+    &:active {
+        border: 1px solid gray;
+    }
+
+    &:focus {
+        box-shadow: none;
+        border: 1px solid #d5d5d5;
+    }
+}
+/* overwrites  */

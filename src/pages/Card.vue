@@ -6,14 +6,6 @@ const isButtonDisabled = ref(true);
 
 // button On click function
 
-function buttonClick() {
-    if (isButtonDisabled.value === false) {
-        isButtonDisabled.value = true;
-    } else if (isButtonDisabled.value === true) {
-        isButtonDisabled.value = false;
-    }
-}
-
 const props = defineProps({
     title: {
         type: String,
@@ -39,53 +31,77 @@ console.log('User joined:', props.username);
         </div>
         <div class="card_links">
             <div>
-                <div>
+                <div class="card_links_left-icon">
                     <i class="ph ph-chat-centered-dots"></i>
+                </div>
+                <div class="card_links_label">
                     <p>Details</p>
                 </div>
-                <div>
+                <div class="card_links_right-icon">
                     <i class="ph ph-arrow-right right-icon"></i>
                 </div>
             </div>
             <div>
-                <div>
-                    <i class="ph ph-user"></i>
-                    <p>User</p>
+                <div class="card_links_left-icon">
+                    <i class="ph ph-chat-centered-dots"></i>
                 </div>
-                <div>
+                <div class="card_links_label">
+                    <p>Users</p>
+                </div>
+                <div class="card_links_right-icon">
                     <i class="ph ph-arrow-right right-icon"></i>
                 </div>
             </div>
             <div>
-                <p>Mapped Entities</p>
+                <div class="card_links_left-icon">
+                    <i class="ph ph-chat-centered-dots"></i>
+                </div>
+                <div class="card_links_label">
+                    <p>Mapped Entities</p>
+                </div>
+                <div class="card_links_right-icon">
+                    <i class="ph ph-arrow-right right-icon"></i>
+                </div>
             </div>
+
             <div>
-                <p>Users</p>
+                <div class="card_links_left-icon">
+                    <i class="ph ph-chat-centered-dots"></i>
+                </div>
+                <div class="card_links_label">
+                    <p>Data Requests</p>
+                </div>
+                <div class="card_links_right-icon">
+                    <i class="ph ph-arrow-right right-icon"></i>
+                </div>
             </div>
+
             <div>
-                <p>Data Requests</p>
-            </div>
-            <div>
-                <p>Add to My Entities</p>
+                <div class="card_links_left-icon">
+                    <i class="ph ph-chat-centered-dots"></i>
+                </div>
+                <div class="card_links_label">
+                    <p>Add to My Entities</p>
+                </div>
+                <div class="card_links_right-icon">
+                    <i class="ph ph-arrow-right right-icon"></i>
+                </div>
             </div>
         </div>
-        <button :disabled="isButtonDisabled">Button</button>
-        <button @click="buttonClick">change state</button>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .card {
     --header-background-color: #ffffff;
-    --header-border-color: gray;
-    --icon-border-color: gray;
+    --header-border-color: rgb(224, 224, 224);
+    --icon-border-color: rgb(224, 224, 224);
     --icon-background-color: #e3e3e3;
-    border: 1px solid gray;
+    border: 1px solid rgb(224, 224, 224);
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
     height: min-content;
     overflow: hidden;
-    background-color: rgb(243, 243, 243);
 
     &_heading {
         display: flex;
@@ -123,39 +139,47 @@ console.log('User joined:', props.username);
         //padding: 16px;
         gap: 1px;
 
+        p {
+            margin: 0;
+        }
+
         > div {
+            gap: 8px;
             width: 100%;
             height: 40px;
             outline: 1px solid rgb(224, 224, 224);
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: row;
             padding: 0 16px;
             color: gray;
             transition: background-color, font-size 0.5s ease;
-            > div {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                flex-direction: row;
-                gap: 8px;
-            }
-            i.right-icon {
-                display: none;
-            }
             &:hover {
-                //background-color: #F5F5F5;
+                text-decoration: underline;
                 cursor: pointer;
-                i.right-icon {
+                color: black;
+                .card_links_right-icon {
                     display: block;
-                    font-size: 16px;
                 }
-                p {
-                    text-decoration: underline;
-                    cursor: pointer;
+                i {
+                    text-decoration: none;
                 }
             }
+        }
+        &_left-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &_label {
+            width: 100%;
+        }
+        &_right-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
         }
     }
 }
@@ -165,6 +189,8 @@ console.log('User joined:', props.username);
     --icon-background-color: #fbf5df;
 
     &:hover {
+        --icon-background-color: #f1dc8e;
+
         --header-background-color: #fbf5df;
         --header-border-color: #fbf5df;
     }
@@ -175,8 +201,34 @@ console.log('User joined:', props.username);
     --icon-background-color: #dffbe5;
 
     &:hover {
+        --icon-background-color: #85f09c;
+
         --header-background-color: #dffbe5;
         --header-border-color: #dffbe5;
+    }
+}
+
+.card--cp {
+    --icon-border-color: #dda8f5;
+    --icon-background-color: #f8edfd;
+
+    &:hover {
+        --icon-background-color: #dda8f5;
+
+        --header-background-color: #f8edfd;
+        --header-border-color: #f8edfd;
+    }
+}
+
+.card--me {
+    --icon-border-color: #aee9f4;
+    --icon-background-color: #edfafd;
+
+    &:hover {
+        --icon-background-color: #aee9f4;
+
+        --header-background-color: #edfafd;
+        --header-border-color: #edfafd;
     }
 }
 </style>

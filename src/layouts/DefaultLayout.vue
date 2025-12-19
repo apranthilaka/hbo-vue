@@ -1,13 +1,11 @@
 <script setup>
-import Header from '@/commonComponents/Header.vue';
+import TopMenu from '@/commonComponents/TopMenu.vue';
 import Sidebar from '@/commonComponents/Sidebar.vue';
 </script>
 <template>
     <div class="layout">
-        <Header />
-
+        <TopMenu />
         <slot> </slot>
-
         <Sidebar></Sidebar>
     </div>
 </template>

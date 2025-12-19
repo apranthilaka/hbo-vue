@@ -26,6 +26,24 @@ const cardDetails = ref([
         id: 1,
         name: 'Wireless Mouse',
         price: '$25',
+        entityType: 'card--cp',
+    },
+    {
+        id: 2,
+        name: 'Mechanical Keyboard',
+        price: '$85',
+        entityType: 'card--gp',
+    },
+    {
+        id: 3,
+        name: 'Monitor Stand',
+        price: '$45',
+        entityType: 'card--cp',
+    },
+    {
+        id: 1,
+        name: 'Wireless Mouse',
+        price: '$25',
         entityType: 'card--gp',
     },
     {
@@ -33,6 +51,42 @@ const cardDetails = ref([
         name: 'Mechanical Keyboard',
         price: '$85',
         entityType: 'card--gp',
+    },
+    {
+        id: 3,
+        name: 'Monitor Stand',
+        price: '$45',
+        entityType: 'card--me',
+    },
+    {
+        id: 1,
+        name: 'Wireless Mouse',
+        price: '$25',
+        entityType: 'card--gp',
+    },
+    {
+        id: 2,
+        name: 'Mechanical Keyboard',
+        price: '$85',
+        entityType: 'card--gp',
+    },
+    {
+        id: 3,
+        name: 'Monitor Stand',
+        price: '$45',
+        entityType: 'card--me',
+    },
+    {
+        id: 1,
+        name: 'Wireless Mouse',
+        price: '$25',
+        entityType: 'card--gp',
+    },
+    {
+        id: 2,
+        name: 'Mechanical Keyboard',
+        price: '$85',
+        entityType: 'card--cp',
     },
     {
         id: 3,
@@ -50,7 +104,7 @@ const cardDetails = ref([
         id: 2,
         name: 'Mechanical Keyboard',
         price: '$85',
-        entityType: 'card--gp',
+        entityType: 'card--me',
     },
     {
         id: 3,
@@ -68,67 +122,13 @@ const cardDetails = ref([
         id: 2,
         name: 'Mechanical Keyboard',
         price: '$85',
-        entityType: 'card--gp',
+        entityType: 'card--cp',
     },
     {
         id: 3,
         name: 'Monitor Stand',
         price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--gp',
-    },
-    {
-        id: 1,
-        name: 'Wireless Mouse',
-        price: '$25',
-        entityType: 'card--gp',
-    },
-    {
-        id: 2,
-        name: 'Mechanical Keyboard',
-        price: '$85',
-        entityType: 'card--gp',
-    },
-    {
-        id: 3,
-        name: 'Monitor Stand',
-        price: '$45',
-        entityType: 'card--lp',
+        entityType: 'card--me',
     },
     {
         id: 1,
@@ -225,14 +225,80 @@ const cardDetails = ref([
 <template>
     <DefaultLayout>
         <div class="dashboard-container">
-            <div>Header</div>
-            <div>Title</div>
-            <div class="cardsContainer">
-                <div v-for="card in cardDetails" :key="card.id">
-                    <Card
-                        :title="card.name"
-                        :entityTypeClass="card.entityType"
-                    />
+            <div class="data-wrapper">
+                <div class="titleComponent">
+                    <div class="titleComponent__left">
+                        <i class="ph-fill ph-squares-four"></i>
+                        <h4>Dashboard</h4>
+                    </div>
+                    <div class="titleComponent__right">
+                        <div class="indicator indicator--green">
+                            <div>
+                                <p>Background Jobs</p>
+                            </div>
+                            <div class="indicator__value">1 Entries</div>
+                        </div>
+
+                        <div class="indicator indicator--red">
+                            <div>
+                                <p>Import Queue Status</p>
+                            </div>
+                            <div class="indicator__value">ON</div>
+                        </div>
+
+                        <div class="indicator indicator--yellow">
+                            <div>
+                                <p>Mailer Status</p>
+                            </div>
+                            <div class="indicator__value">OFF</div>
+                        </div>
+                        <div class="indicator indicator--gray">
+                            <div>
+                                <p>Main Queue Status</p>
+                            </div>
+                            <div class="indicator__value">ON</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardsTitle">
+                    <div class="cardsTitle_left">
+                        <h5>125 Entities in Total</h5>
+                    </div>
+                    <div>
+                        <div class="cardsTitle_right">
+                            <select
+                                name="favorite-cuisine"
+                                aria-label="Select your favorite cuisine..."
+                                required
+                            >
+                                <option selected disabled value="">
+                                    All (Entities + Master Entities)
+                                </option>
+                                <option>Italian</option>
+                                <option>Japanese</option>
+                                <option>Indian</option>
+                                <option>Thai</option>
+                                <option>French</option>
+                            </select>
+
+                            <input
+                                type="search"
+                                name="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+
+                            <button class="primaryButton">Add Entity</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardsContainer">
+                    <div v-for="card in cardDetails" :key="card.id">
+                        <Card
+                            :title="card.name"
+                            :entityTypeClass="card.entityType"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
@@ -240,36 +306,47 @@ const cardDetails = ref([
 </template>
 <style lang="scss" scoped>
 .dashboard-container {
-    // border: 10px solid green;
-
-    /* 1. Set a fixed or relative height */
-    /* Fallback for older browsers */
-    height: 100vh;
-    /* The modern standard (Dynamic Viewport Height) */
-    height: 100dvh;
-    /* Your Webkit fix as an extra safety measure */
-    height: -webkit-fill-available;
-
+    // border: 10px solid red;
+    grid-column: 2/3;
+    grid-row: 2/3;
     overflow: hidden;
-
     /* 2. Turn on Flexbox */
+    // display: flex;
+    // flex-direction: column;
+    /* 3. Prevent the container itself from scrolling */
+    // overflow: hidden;
+    // box-sizing: border-box;
+}
+.header-wrapper {
+    height: 56px;
+    width: 100%;
+    background-color: rgb(63, 27, 33);
+    padding: 0 16px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.data-wrapper {
     display: flex;
     flex-direction: column;
-
-    /* 3. Prevent the container itself from scrolling */
-    overflow: hidden;
-    box-sizing: border-box;
+    height: 100%; /* Ensure the wrapper fills the parent container's height */
 }
-
+.action-wrapper {
+    height: 56px;
+    width: 100%;
+    background-color: pink;
+    padding: 0 16px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .cardsContainer {
-    /* 1. Take up all remaining space in the flex column */
-    flex-grow: 1;
-
-    /* 2. Allow scrolling on this element specifically */
+    // border: 10px solid rgb(0, 167, 50);
+    height: 100%;
     overflow-y: auto;
 
-    /* Keep your existing grid styles */
-    // border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: min-content;
@@ -289,4 +366,129 @@ const cardDetails = ref([
     /* 3. Hide scrollbar for IE and older Edge */
     -ms-overflow-style: none;
 }
+
+// title component
+.titleComponent {
+    background-color: #ffffff;
+    padding: 16px 24px;
+    // border-bottom: 1px solid rgb(214, 214, 214);
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+    h4 {
+        margin: 0;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        i {
+            font-size: 24px;
+            //padding-top: 3px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.indicator {
+    --value-bg-color: gray;
+    --value-text-color: #ffffff;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 0 12px;
+    border-radius: 4px;
+    gap: 16px;
+    font-size: 14px;
+
+    p {
+        margin: 0;
+        color: rgb(114, 106, 106);
+        //font-size: 13px;
+    }
+
+    &__value {
+        min-width: 50px;
+        padding: 2px 8px;
+        background-color: var(--value-bg-color);
+        color: var(--value-text-color);
+        border-radius: 4px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--green {
+        --value-bg-color: hsla(104, 50%, 85%, 1);
+        --value-text-color: hsla(104, 50%, 25%, 1);
+    }
+
+    &--red {
+        --value-bg-color: hsla(0, 70%, 85%, 1);
+        --value-text-color: hsla(0, 70%, 25%, 1);
+    }
+
+    &--yellow {
+        --value-bg-color: hsla(45, 100%, 85%, 1);
+        --value-text-color: hsla(45, 100%, 25%, 1);
+    }
+
+    &--gray {
+        --value-bg-color: gray;
+        --value-text-color: #ffffff;
+    }
+}
+// title component
+
+// card title
+.cardsTitle {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h5 {
+        margin: 0;
+    }
+
+    &_left {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        input {
+            border-radius: 3px;
+        }
+    }
+
+    input,
+    select {
+        margin: 0;
+    }
+
+    button {
+        margin: 0;
+    }
+}
+//card title
 </style>
