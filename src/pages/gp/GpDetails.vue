@@ -26,6 +26,6 @@ const form = reactive({ name: '', password: '' });
 .step-wrapper{
   width: 100%;
   height: 100%;
-  background-color: red;
+  padding: 24px;
 }
 </style>

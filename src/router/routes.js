@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import SIteMap from '@/pages/SiteMap.vue';
-import Dashboard from '@/pages/Dashboard.vue';
+import SIteMap from '@/pages/dashboard/SiteMap.vue';
+import Dashboard from '@/pages/dashboard/Dashboard.vue';
 import GpMain from "@/pages/gp/GpMain.vue";
 
 // creating router instance

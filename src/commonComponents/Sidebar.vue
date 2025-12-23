@@ -24,11 +24,11 @@ import { ref } from 'vue';
                 >
             </div>
 
-          <div class="link-wrapper_link">
-            <RouterLink to="/gp" active-class="is-active"
-            ><p>GP</p></RouterLink
-            >
-          </div>
+<!--          <div class="link-wrapper_link">-->
+<!--            <RouterLink to="/gp" active-class="is-active"-->
+<!--            ><p>GP</p></RouterLink-->
+<!--            >-->
+<!--          </div>-->
         </nav>
     </div>
 </template>

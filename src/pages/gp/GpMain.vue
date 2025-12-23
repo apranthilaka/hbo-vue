@@ -7,9 +7,10 @@ import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import GpHeading from "@/pages/gp/GpHeading.vue";
 
 const activeTab = ref(GpDetails);
+const currentTab = ref('details');
 
 const tabs = [
-  { name: 'Details', label: 'Details', component: GpDetails },
+  { name: 'details', label: 'Details', component: GpDetails },
   { name: 'billing', label: '2. Billing', component: BillingDetails },
   { name: 'review', label: '3. Review', component: ReviewOrder },
 ];
@@ -27,8 +28,8 @@ const handleStepUpdate = (data) => {
        <button
            v-for="tab in tabs"
            :key="tab.name"
-           :class="{ active: activeTab === tab.component }"
-           @click="activeTab = tab.component"
+           @click="currentTab = tab.name"
+           :class="{ active: currentTab === tab.name }"
        >
          {{ tab.label }}
        </button>
@@ -46,14 +47,30 @@ const handleStepUpdate = (data) => {
 <style scoped>
 
 .tab-headers{
-  border: 1px solid red;
-  height: 56px;
-  padding: 0 24px;
-
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
+  height: 56px;
+  padding: 0 24px;
+  border-bottom: 1px solid hsla(159, 22%, 77%, 1)
 }
+button{
+  background-color: white;
+  color: gray;
+  border-radius: 4px 4px 0 0;
+  border-collapse: collapse;
+  border: none;
+;
+}
+
+.active {
+  background-color: hsla(159, 22%, 77%, 1);
+  color: white; /* Optional: make text readable against red */
+  border: 1px solid hsla(159, 22%, 77%, 1);
+  color: hsl(158, 25%, 40%)
+}
+
+
 
 </style>
 
