@@ -10,83 +10,91 @@ const route = useRoute();
 const entityName = computed(() => route.query.name || 'GP Details');
 
 const goBack = () => {
-  router.back();
+    router.back();
 };
 </script>
 
 <template>
-  <div class="page-top-bar">
-    <nav class="breadcrumb">
-      <ol>
-        <li>
-          <RouterLink to="/dashboard">Dashboard</RouterLink>
-        </li>
-        <li class="separator">/</li>
-        <li>
-          <span class="current-page">{{ entityName }}</span>
-        </li>
-      </ol>
-    </nav>
-
-    <button @click="goBack" class="btn-back">
-      <i class="ph ph-arrow-left"></i>
-      Back
-    </button>
-  </div>
+    <div class="gp-heading">
+        <button @click="goBack" class="btn-back">
+            <i class="ph ph-arrow-left"></i>
+            <!-- Back -->
+        </button>
+        <nav class="breadcrumb">
+            <ol>
+                <li>
+                    <RouterLink to="/dashboard">Dashboard</RouterLink>
+                </li>
+                <li class="separator">/</li>
+                <li>
+                    <span class="current-page">{{ entityName }}</span>
+                </li>
+            </ol>
+        </nav>
+    </div>
 </template>
 
 <style scoped>
-.page-top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  background: #f9f9f9;
-  border-bottom: 1px solid #e0e0e0;
+.gp-heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 24px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e0e0e0;
+    height: 56px;
+    gap: 16px;
 }
 
 .breadcrumb {
-  ol {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 8px;
-    font-size: 14px;
-  }
-
-  a {
-    color: #666;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-      color: #000;
+    ol {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
     }
-  }
 
-  .separator {
-    color: #ccc;
-  }
+    a {
+        color: #666;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+    }
 
-  .current-page {
-    color: #222;
-    font-weight: 600;
-  }
+    .separator {
+        color: #ccc;
+    }
+
+    .current-page {
+        color: #222;
+        font-weight: 600;
+    }
 }
 
 .btn-back {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: white;
-  border: 1px solid #dcdcdc;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 6px; */
+    background: rgb(255, 255, 255);
+    border-radius: 1000px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border: 1px solid gray;
+    color: gray;
+    padding-top: 2px;
 
-  &:hover {
-    background: #f0f0f0;
-  }
+    &:hover {
+        background: #252525;
+        font-size: 16px;
+        color: white;
+        padding-top: 0;
+    }
 }
 </style>

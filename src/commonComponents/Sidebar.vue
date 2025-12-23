@@ -6,8 +6,8 @@ const route = useRoute();
 
 // Check if we are on dashboard or any of the entity pages
 const isDashboardActive = computed(() => {
-  const entityRoutes = ['/dashboard', '/gp', '/lp', '/cp', '/me'];
-  return entityRoutes.some(path => route.path.startsWith(path));
+    const entityRoutes = ['/dashboard', '/gp', '/lp', '/cp', '/me'];
+    return entityRoutes.some((path) => route.path.startsWith(path));
 });
 </script>
 
@@ -21,22 +21,22 @@ const isDashboardActive = computed(() => {
                 <i class="ph ph-list"></i>
             </div>
         </div>
-      <nav class="link-wrapper">
-        <div class="link-wrapper_link">
-          <RouterLink to="/" exact-active-class="is-active">
-            <p>Sitemap</p>
-          </RouterLink>
-        </div>
+        <nav class="link-wrapper">
+            <div class="link-wrapper_link">
+                <RouterLink to="/" exact-active-class="is-active">
+                    <p>Sitemap</p>
+                </RouterLink>
+            </div>
 
-        <div class="link-wrapper_link">
-          <RouterLink
-              to="/dashboard"
-              :class="{ 'is-active': isDashboardActive }"
-          >
-            <p>Dashboard</p>
-          </RouterLink>
-        </div>
-      </nav>
+            <div class="link-wrapper_link">
+                <RouterLink
+                    to="/dashboard"
+                    :class="{ 'is-active': isDashboardActive }"
+                >
+                    <p>Dashboard</p>
+                </RouterLink>
+            </div>
+        </nav>
     </div>
 </template>
 
