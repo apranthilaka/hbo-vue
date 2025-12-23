@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/pages/SiteMap.vue';
+import SIteMap from '@/pages/SiteMap.vue';
 import Dashboard from '@/pages/Dashboard.vue';
+import GpMain from "@/pages/gp/GpMain.vue";
 
 // creating router instance
 const router = createRouter({
@@ -8,11 +9,15 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            component: Home,
+            component: SIteMap,
         },
         {
             path: '/dashboard',
             component: Dashboard,
+        },
+        {
+            path: '/gp',
+            component: GpMain,
         },
     ],
 });

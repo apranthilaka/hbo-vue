@@ -16,6 +16,27 @@ html {
     font-size: 87.5%;
     scroll-behavior: smooth;
 }
+/* Small Devices (Large Phones/Small Tabs - 640px+) */
+@media (min-width: 640px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+/* Medium Devices (Tablets - 768px+) */
+@media (min-width: 1024px) {
+    html {
+        font-size: 13px; /* ~13.5px */
+    }
+}
+
+/* Large Devices (Laptops - 1024px+) */
+/* This is your requested "Max" cap */
+@media (min-width: 1920px) {
+    html {
+        font-size: 14px; /* 14px */
+    }
+}
 
 /* 3. Define default typography on the body 
    Now 1rem will correctly equal the user's base font size. */
@@ -77,7 +98,7 @@ input {
     justify-content: space-between;
     gap: 16px;
     padding: 0 31px 0 12px;
-    font-size: 14px;
+
     width: 200px;
     box-shadow: none;
     color: hbo.$text-medium-emphasis;

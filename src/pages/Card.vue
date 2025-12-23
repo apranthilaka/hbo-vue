@@ -16,19 +16,24 @@ const props = defineProps({
         default: 'card--gp',
     },
     isMember: Boolean,
+    titleLink: String,
 });
 
 // You can access props in the script using the 'props' object
-console.log('User joined:', props.username);
 </script>
 <template>
+    <div>{{ props.userName }}</div>
     <!-- :class is attribute binding -->
     <div class="card" :class="entityTypeClass">
-        <div class="card_heading">
+        <RouterLink :to='titleLink'>
+          <div class="card_heading">
             <div class="card_icon">GP</div>
             <!-- {{ title }} is text interpalation  -->
-            <h6>{{ title }}</h6>
-        </div>
+
+              <h6>{{ title }}</h6>
+
+          </div>
+        </RouterLink>
         <div class="card_links">
             <div>
                 <div class="card_links_left-icon">
@@ -116,7 +121,13 @@ console.log('User joined:', props.username);
 
         h6 {
             margin: 0;
+
         }
+      &:hover{
+        h6{
+          text-decoration: underline;
+        }
+      }
     }
 
     &_icon {
@@ -238,5 +249,11 @@ console.log('User joined:', props.username);
         --header-background-color: #edfafd;
         --header-border-color: #edfafd;
     }
+}
+
+RouterLink{
+  &:hover{
+    text-decoration: underline;
+  }
 }
 </style>

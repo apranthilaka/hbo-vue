@@ -4,43 +4,45 @@ import Card from './Card.vue';
 import { ref } from 'vue';
 
 const cardDetails = ref([
-    { id: 1, name: 'Nebula Nexus', entityType: 'card--gp' },
-    { id: 2, name: 'Vortex Ventures', entityType: 'card--gp' },
-    { id: 3, name: 'Stellar Solutions', entityType: 'card--lp' },
-    { id: 4, name: 'Apex Analytics', entityType: 'card--cp' },
-    { id: 5, name: 'Quantum Quorum', entityType: 'card--gp' },
-    { id: 6, name: 'Blue Ridge Biotics', entityType: 'card--cp' },
-    { id: 7, name: 'Summit Systems', entityType: 'card--gp' },
-    { id: 8, name: 'Ironwood Industries', entityType: 'card--gp' },
-    { id: 9, name: 'Ethereal Edge', entityType: 'card--me' },
-    { id: 10, name: 'Titan Tech', entityType: 'card--gp' },
-    { id: 11, name: 'Nova Networks', entityType: 'card--gp' },
+    { id: 1, name: 'Nebula Nexus', entityType: 'card--gp', route:'/gp' },
+    { id: 2, name: 'Vortex Ventures', entityType: 'card--gp', route:'/gp' },
+    { id: 3, name: 'Stellar Solutions', entityType: 'card--lp' , route:'/lp' },
+    { id: 4, name: 'Apex Analytics', entityType: 'card--cp' , route:'/cp'},
+    { id: 5, name: 'Quantum Quorum', entityType: 'card--gp', route:'/gp'  },
+    { id: 6, name: 'Blue Ridge Biotics', entityType: 'card--cp' , route:'/cp'},
+    { id: 7, name: 'Summit Systems', entityType: 'card--gp' , route:'/gp' },
+    { id: 8, name: 'Ironwood Industries', entityType: 'card--gp', route:'/gp' },
+    { id: 9, name: 'Ethereal Edge', entityType: 'card--me' , route:'/me'},
+    { id: 10, name: 'Titan Tech', entityType: 'card--gp' , route:'/gp'},
+    { id: 11, name: 'Nova Networks', entityType: 'card--gp' , route:'/gp' },
     { id: 12, name: 'Silverline Software', entityType: 'card--me' },
-    { id: 13, name: 'Pinnacle Partners', entityType: 'card--gp' },
-    { id: 14, name: 'Zenith Zero', entityType: 'card--cp' },
-    { id: 15, name: 'Crestline Core', entityType: 'card--lp' },
-    { id: 16, name: 'Velocity Vision', entityType: 'card--gp' },
-    { id: 17, name: 'Prism Power', entityType: 'card--me' },
-    { id: 18, name: 'Aether Agency', entityType: 'card--gp' },
-    { id: 19, name: 'Horizon Holdings', entityType: 'card--gp' },
-    { id: 20, name: 'Flux Foundry', entityType: 'card--cp' },
-    { id: 21, name: 'Terra Trace', entityType: 'card--me' },
-    { id: 22, name: 'Catalyst Cloud', entityType: 'card--gp' },
-    { id: 23, name: 'Opal Optics', entityType: 'card--gp' },
-    { id: 24, name: 'Driftwood Digital', entityType: 'card--lp' },
-    { id: 25, name: 'Echo Engineering', entityType: 'card--gp' },
-    { id: 26, name: 'Radiant Robotics', entityType: 'card--gp' },
-    { id: 27, name: 'Sovereign Shield', entityType: 'card--gp' },
-    { id: 28, name: 'Kinetic Keys', entityType: 'card--gp' },
-    { id: 29, name: 'Atlas Align', entityType: 'card--gp' },
-    { id: 30, name: 'Modulus Media', entityType: 'card--lp' },
-    { id: 31, name: 'Solaris Stream', entityType: 'card--gp' },
-    { id: 32, name: 'Beacon Bridge', entityType: 'card--gp' },
-    { id: 33, name: 'Vector Valet', entityType: 'card--lp' },
-    { id: 34, name: 'Alpha Aspect', entityType: 'card--gp' },
-    { id: 35, name: 'Mantra Metals', entityType: 'card--gp' },
-    { id: 36, name: 'Neon Node', entityType: 'card--gp' },
+    { id: 13, name: 'Pinnacle Partners', entityType: 'card--gp' , route:'/gp' },
+    { id: 14, name: 'Zenith Zero', entityType: 'card--cp' , route:'/cp'},
+    { id: 15, name: 'Crestline Core', entityType: 'card--lp' , route:'/lp'},
+    { id: 16, name: 'Velocity Vision', entityType: 'card--gp' , route:'/gp' },
+    { id: 17, name: 'Prism Power', entityType: 'card--me' , route:'/me'},
+    { id: 18, name: 'Aether Agency', entityType: 'card--gp' , route:'/gp' },
+    { id: 19, name: 'Horizon Holdings', entityType: 'card--gp' , route:'/gp' },
+    { id: 20, name: 'Flux Foundry', entityType: 'card--cp' , route:'/cp'},
+    { id: 21, name: 'Terra Trace', entityType: 'card--me' , route:'/me'},
+    { id: 22, name: 'Catalyst Cloud', entityType: 'card--gp', route:'/gp'  },
+    { id: 23, name: 'Opal Optics', entityType: 'card--gp' , route:'/gp'},
+    { id: 24, name: 'Driftwood Digital', entityType: 'card--lp' , route:'/lp'},
+    { id: 25, name: 'Echo Engineering', entityType: 'card--gp' , route:'/gp' },
+    { id: 26, name: 'Radiant Robotics', entityType: 'card--gp' , route:'/gp' },
+    { id: 27, name: 'Sovereign Shield', entityType: 'card--gp' , route:'/gp' },
+    { id: 28, name: 'Kinetic Keys', entityType: 'card--gp' , route:'/gp' },
+    { id: 29, name: 'Atlas Align', entityType: 'card--gp' , route:'/gp' },
+    { id: 30, name: 'Modulus Media', entityType: 'card--lp' , route:'/lp'},
+    { id: 31, name: 'Solaris Stream', entityType: 'card--gp' , route:'/gp' },
+    { id: 32, name: 'Beacon Bridge', entityType: 'card--gp' , route:'/gp' },
+    { id: 33, name: 'Vector Valet', entityType: 'card--lp', route:'/lp' },
+    { id: 34, name: 'Alpha Aspect', entityType: 'card--gp' , route:'/gp' },
+    { id: 35, name: 'Mantra Metals', entityType: 'card--gp' , route:'/gp' },
+    { id: 36, name: 'Neon Node', entityType: 'card--gp', route:'/gp'  },
 ]);
+let answer = ref(true);
+let className = ref('');
 </script>
 <template>
     <DefaultLayout>
@@ -53,9 +55,7 @@ const cardDetails = ref([
                     </div>
                     <div class="dashboard-title__right">
                         <div class="indicator indicator--green">
-                            <div>
-                                <p>Background Jobs</p>
-                            </div>
+                            <div><p>Background Jobs</p></div>
                             <div class="indicator__value">1 Entries</div>
                         </div>
 
@@ -114,14 +114,15 @@ const cardDetails = ref([
                         </div>
                     </div>
                 </div>
-                <div class="cardsContainer">
-                    <div v-for="card in cardDetails" :key="card.id">
-                        <Card
-                            :title="card.name"
-                            :entityTypeClass="card.entityType"
-                        />
-                    </div>
+              <div class="cardsContainer">
+                <div v-for="card in cardDetails" :key="card.id">
+                  <Card
+                      :titleLink="`${card.route}?name=${encodeURIComponent(card.name)}`"
+                      :title="card.name"
+                      :entityTypeClass="card.entityType"
+                  />
                 </div>
+              </div>
             </div>
         </div>
     </DefaultLayout>
@@ -230,7 +231,6 @@ const cardDetails = ref([
     padding: 0 12px;
     border-radius: 4px;
     gap: 16px;
-    font-size: 14px;
 
     p {
         margin: 0;
