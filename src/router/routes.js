@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import SIteMap from '@/pages/dashboard/SiteMap.vue';
+import SIteMap from '@/pages/sitemap/SiteMap.vue';
 import Dashboard from '@/pages/dashboard/Dashboard.vue';
 import GpMain from "@/pages/gp/GpMain.vue";
 

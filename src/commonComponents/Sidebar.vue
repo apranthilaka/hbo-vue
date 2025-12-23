@@ -1,5 +1,14 @@
 <script setup>
-import { ref } from 'vue';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+// Check if we are on dashboard or any of the entity pages
+const isDashboardActive = computed(() => {
+  const entityRoutes = ['/dashboard', '/gp', '/lp', '/cp', '/me'];
+  return entityRoutes.some(path => route.path.startsWith(path));
+});
 </script>
 
 <template>
@@ -12,24 +21,22 @@ import { ref } from 'vue';
                 <i class="ph ph-list"></i>
             </div>
         </div>
-        <nav class="link-wrapper">
-            <div class="link-wrapper_link">
-                <RouterLink to="/" active-class="is-active"
-                    ><p>Sitemap</p></RouterLink
-                >
-            </div>
-            <div class="link-wrapper_link">
-                <RouterLink to="/dashboard" active-class="is-active"
-                    ><p>Dashboard</p></RouterLink
-                >
-            </div>
+      <nav class="link-wrapper">
+        <div class="link-wrapper_link">
+          <RouterLink to="/" exact-active-class="is-active">
+            <p>Sitemap</p>
+          </RouterLink>
+        </div>
 
-<!--          <div class="link-wrapper_link">-->
-<!--            <RouterLink to="/gp" active-class="is-active"-->
-<!--            ><p>GP</p></RouterLink-->
-<!--            >-->
-<!--          </div>-->
-        </nav>
+        <div class="link-wrapper_link">
+          <RouterLink
+              to="/dashboard"
+              :class="{ 'is-active': isDashboardActive }"
+          >
+            <p>Dashboard</p>
+          </RouterLink>
+        </div>
+      </nav>
     </div>
 </template>
 
