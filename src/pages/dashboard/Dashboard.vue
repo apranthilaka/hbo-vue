@@ -50,89 +50,87 @@ let answer = ref(true);
 let className = ref('');
 </script>
 <template>
-    <DefaultLayout>
-        <div class="dashboard-container">
-            <div class="data-wrapper">
-                <div class="dashboard-title">
-                    <div class="dashboard-title__left">
-                        <i class="ph-fill ph-squares-four"></i>
-                        <h4>DASHBOARD</h4>
-                    </div>
-                    <div class="dashboard-title__right">
-                        <div class="indicator indicator--green">
-                            <div><p>Background Jobs</p></div>
-                            <div class="indicator__value">1 Entries</div>
-                        </div>
-
-                        <div class="indicator indicator--red">
-                            <div>
-                                <p>Import Queue Status</p>
-                            </div>
-                            <div class="indicator__value">ON</div>
-                        </div>
-
-                        <div class="indicator indicator--yellow">
-                            <div>
-                                <p>Mailer Status</p>
-                            </div>
-                            <div class="indicator__value">OFF</div>
-                        </div>
-                        <div class="indicator indicator--gray">
-                            <div>
-                                <p>Main Queue Status</p>
-                            </div>
-                            <div class="indicator__value">ON</div>
-                        </div>
-                    </div>
+    <div class="dashboard-container">
+        <div class="data-wrapper">
+            <div class="dashboard-title">
+                <div class="dashboard-title__left">
+                    <i class="ph-fill ph-squares-four"></i>
+                    <h4>DASHBOARD</h4>
                 </div>
-                <div class="cards-title">
-                    <div class="cards-title_left">
+                <div class="dashboard-title__right">
+                    <div class="indicator indicator--green">
+                        <div><p>Background Jobs</p></div>
+                        <div class="indicator__value">1 Entries</div>
+                    </div>
+
+                    <div class="indicator indicator--red">
                         <div>
-                            <h6>125 Entities in Total</h6>
+                            <p>Import Queue Status</p>
                         </div>
+                        <div class="indicator__value">ON</div>
                     </div>
-                    <div>
-                        <div class="cards-title_right">
-                            <select
-                                name="favorite-cuisine"
-                                aria-label="Select your favorite cuisine..."
-                                required
-                            >
-                                <option selected disabled value="">
-                                    All (Entities + Master Entities)
-                                </option>
-                                <option>Italian</option>
-                                <option>Japanese</option>
-                                <option>Indian</option>
-                                <option>Thai</option>
-                                <option>French</option>
-                            </select>
 
-                            <input
-                                type="search"
-                                name="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                            />
-
-                            <button class="primaryButton">Add Entity</button>
+                    <div class="indicator indicator--yellow">
+                        <div>
+                            <p>Mailer Status</p>
                         </div>
+                        <div class="indicator__value">OFF</div>
                     </div>
-                </div>
-                <div class="cardsContainer">
-                    <div v-for="card in cardDetails" :key="card.id">
-                        <Card
-                            :titleLink="`${
-                                card.route
-                            }?name=${encodeURIComponent(card.name)}`"
-                            :title="card.name"
-                            :entityTypeClass="card.entityType"
-                        />
+                    <div class="indicator indicator--gray">
+                        <div>
+                            <p>Main Queue Status</p>
+                        </div>
+                        <div class="indicator__value">ON</div>
                     </div>
                 </div>
             </div>
+            <div class="cards-title">
+                <div class="cards-title_left">
+                    <div>
+                        <h6>125 Entities in Total</h6>
+                    </div>
+                </div>
+                <div>
+                    <div class="cards-title_right">
+                        <select
+                            name="favorite-cuisine"
+                            aria-label="Select your favorite cuisine..."
+                            required
+                        >
+                            <option selected disabled value="">
+                                All (Entities + Master Entities)
+                            </option>
+                            <option>Italian</option>
+                            <option>Japanese</option>
+                            <option>Indian</option>
+                            <option>Thai</option>
+                            <option>French</option>
+                        </select>
+
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+
+                        <button class="primaryButton">Add Entity</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardsContainer">
+                <div v-for="card in cardDetails" :key="card.id">
+                    <Card
+                        :titleLink="`${card.route}?name=${encodeURIComponent(
+                            card.name
+                        )}`"
+                        :title="card.name"
+                        :entityTypeClass="card.entityType"
+                    />
+                </div>
+            </div>
         </div>
-    </DefaultLayout>
+    </div>
 </template>
 <style lang="scss" scoped>
 .dashboard-container {
@@ -190,6 +188,7 @@ let className = ref('');
 
     /* 3. Hide scrollbar for IE and older Edge */
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
 }
 
 // title component

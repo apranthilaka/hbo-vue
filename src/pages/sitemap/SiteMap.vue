@@ -27,24 +27,22 @@ const cardData = [
 ];
 </script>
 <template>
-    <DefaultLayout>
-        <div class="sitemap-container">
-            <div class="data-wrapper">
-                <div class="sitemap-title">
-                    <i class="ph-fill ph-squares-four"></i>
-                    <h4>SITEMAP</h4>
-                </div>
-                <div class="sitemap-cards">
-                    <div class="card" v-for="card in cardData" id="card.id">
-                        <div class="card_title">
-                            <div v-html="card.icon"></div>
-                            <div>{{ card.title }}</div>
-                        </div>
+    <div class="sitemap-container">
+        <div class="data-wrapper">
+            <div class="sitemap-title">
+                <i class="ph-fill ph-squares-four"></i>
+                <h4>SITEMAP</h4>
+            </div>
+            <div class="sitemap-cards">
+                <div class="card" v-for="card in cardData" id="card.id">
+                    <div class="card_title">
+                        <div v-html="card.icon"></div>
+                        <div>{{ card.title }}</div>
                     </div>
                 </div>
             </div>
         </div>
-    </DefaultLayout>
+    </div>
 </template>
 
 <style lang="scss" scoped>

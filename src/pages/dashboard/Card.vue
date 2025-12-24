@@ -25,14 +25,13 @@ const props = defineProps({
     <div>{{ props.userName }}</div>
     <!-- :class is attribute binding -->
     <div class="card" :class="entityTypeClass">
-        <RouterLink :to='titleLink'>
-          <div class="card_heading">
-            <div class="card_icon">GP</div>
-            <!-- {{ title }} is text interpalation  -->
+        <RouterLink :to="titleLink">
+            <div class="card_heading">
+                <div class="card_icon">GP</div>
+                <!-- {{ title }} is text interpalation  -->
 
-              <h6>{{ title }}</h6>
-
-          </div>
+                <h6>{{ title }}</h6>
+            </div>
         </RouterLink>
         <div class="card_links">
             <div>
@@ -121,13 +120,12 @@ const props = defineProps({
 
         h6 {
             margin: 0;
-
         }
-      &:hover{
-        h6{
-          text-decoration: underline;
+        &:hover {
+            h6 {
+                text-decoration: underline;
+            }
         }
-      }
     }
 
     &_icon {
@@ -251,9 +249,9 @@ const props = defineProps({
     }
 }
 
-RouterLink{
-  &:hover{
-    text-decoration: underline;
-  }
+RouterLink {
+    &:hover {
+        text-decoration: underline;
+    }
 }
 </style>

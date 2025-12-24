@@ -40,10 +40,13 @@ const goBack = () => {
     justify-content: flex-start;
     align-items: center;
     padding: 0 24px;
-    background: #f9f9f9;
+    background: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     height: 56px;
     gap: 16px;
+    min-height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .breadcrumb {
