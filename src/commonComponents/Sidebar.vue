@@ -57,6 +57,13 @@ const menuToggle = function () {
                     <p>Dashboard</p>
                 </RouterLink>
             </div>
+
+            <div class="link-wrapper_link">
+                <RouterLink to="/setup" exact-active-class="is-active">
+                    <i class="ph-fill ph-house"></i>
+                    <p>Setup</p>
+                </RouterLink>
+            </div>
         </nav>
     </div>
 </template>
@@ -158,13 +165,6 @@ const menuToggle = function () {
             padding: 0 16px; // Move padding here so the whole clickable area is padded
 
             // This is the magic part
-            &.is-active {
-                background-color: hsla(159, 22%, 77%, 1);
-                p {
-                    color: rgb(45, 52, 75);
-                    font-weight: 500;
-                }
-            }
         }
     }
 }
@@ -194,6 +194,13 @@ const menuToggle = function () {
         justify-content: center;
         align-items: center;
         font-size: 24px;
+    }
+}
+.is-active {
+    background-color: hsla(159, 22%, 77%, 1);
+    p {
+        color: rgb(45, 52, 75);
+        font-weight: 500;
     }
 }
 </style>
