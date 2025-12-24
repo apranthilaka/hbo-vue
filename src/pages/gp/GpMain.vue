@@ -44,8 +44,7 @@ const handleStepUpdate = (data) => {
 
 <style scoped>
 .wizard-container {
-    /* border: 1px solid red; */
-    /* background-color: rgb(247, 247, 247); */
+    height: 100%;
 }
 
 .tab-headers {
@@ -55,6 +54,9 @@ const handleStepUpdate = (data) => {
     height: 56px;
     padding: 0 24px;
     border-bottom: 1px solid hsla(159, 22%, 77%, 1);
+}
+.tab-content {
+    height: 100%;
 }
 button {
     background-color: white;
